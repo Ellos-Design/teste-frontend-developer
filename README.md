@@ -15,7 +15,8 @@ Você deve utilizar as seguintes tecnologias para o desenvolvimento do teste:
 - HTML5
 - CSS
 - JavaScript ou jQuery
-- PHP (Caso seja Full-Stack)
+- PHP (Para Full-Stack)
+- MySQL (Para Full-Stack)
 
 ## O que nos impressionaria no teste
 
