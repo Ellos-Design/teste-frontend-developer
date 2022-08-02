@@ -26,7 +26,7 @@ O projeto foi criado em:
 - [x] numero,
 - [x] mensagem,
 - Após a configuração no banco de dados, execute o Apache e o Banco de dados;
-- Abra o arquivo index.php;
+- Abra o diretorio do arquivo index.php pelo localhost na web;
 
 ## 🤝 Colaboradores
 
