@@ -20,11 +20,11 @@ O projeto foi criado em:
 - Faça um clone do repositório;
 - Configure as credenciais do seu banco no arquivo index.php usando alguma IDE [Editor];
 - Crie a tabela com o nome **contacts** e crie 5 colunas com os seguintes campos: 
-> id
-> nome
-> email
-> numero
-> mensagem
+- [x] id,
+- [x] nome,
+- [x] email,
+- [x] numero,
+- [x] mensagem,
 - Após a configuração no banco de dados, execute o Apache e o Banco de dados;
 - Abra o arquivo index.php;
 
@@ -36,7 +36,7 @@ Pessoa que contribuiu para este projeto:
   <tr>
     <td align="center">
       <a href="https://kain-prog.github.io/kain">
-        <img src="./src/imgs/kain perfil 2 branco azul.jpeg" width="100px;" alt="Foto Kain"/><br>
+        <img src="../src/imgs/kain perfil 2 branco azul.jpeg" width="100px;" alt="Foto Kain"/><br>
         <sub>
           <b>Matheus Santos [Kain Developer]</b>
         </sub>
