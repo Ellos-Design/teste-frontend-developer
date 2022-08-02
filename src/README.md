@@ -1,7 +1,7 @@
 Landing Page - Teste Full-Stack <br>
 
 > Descrição:
-Projeto destinado a uma apresentação de serviços de contabilidade, com formulário ativo coletando os dados para o banco integrado [MySQL];
+Projeto destinado a uma apresentação de serviços de contabilidade, com formulário funcional coletando os dados para o banco integrado [MySQL];
 
 - [x] - Estilização dos elementos HTML com CSS;
 - [x] - Criação do POST com PHP;
@@ -16,11 +16,17 @@ O projeto foi criado em:
 
 ### Como Executar o Projeto:
 
-- Certifique-se de que você possua o Apache instalado em sua máquina;
+- Certifique-se de que você possua o Apache e MySQL instalado em sua máquina;
 - Faça um clone do repositório;
-- Não é necessário criar o banco de dados, basta pegar as variáveis de ambiente disponíveis no arquivo xxx e configurar no arquivo index.php;
+- Configure as credenciais do seu banco no arquivo index.php usando alguma IDE [Editor];
+- Crie a tabela com o nome **contacts** e crie 5 colunas com os seguintes campos: 
+> id
+> nome
+> email
+> numero
+> mensagem
 - Após a configuração no banco de dados, execute o Apache e o Banco de dados;
-- Abra o Arquivo index.php;
+- Abra o arquivo index.php;
 
 ## 🤝 Colaboradores
 

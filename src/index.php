@@ -1,9 +1,4 @@
-<?php
-    // $servername = "localhost";
-    // $database = "contact";
-    // $username = "root";
-    // $password = "";
-    
+<?php    
     $retorno = "";
     $retorno_class = "";
 
