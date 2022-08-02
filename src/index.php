@@ -352,7 +352,7 @@
                     <div class="accordion-group" data-aos="fade-down" data-aos-offset="230">
                         <div class="accordion-header d-flex">
                             <p>É obrigatório o <strong>MEI</strong> ter Contador?</p>
-                            <i id="icon" class="fas fa-chevron-up icon-acc"></i>
+                            <i id="icon" class="fas fa-chevron-down icon-acc"></i>
                         </div>
 
                         <div class="accordion-body">
