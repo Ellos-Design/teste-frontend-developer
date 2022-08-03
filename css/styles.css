@@ -183,6 +183,7 @@ p {
 }
 .headline-contForm {
   flex: 1 1 364px;
+  max-width: 100%;
 }
 .headline-form {
   margin-right: 10px;
@@ -524,7 +525,6 @@ p {
   }
   .servicos-vantagens-body-text {
     width: 600px;
-    max-width: 100%;
   }
   .servicos-chamada {
     margin-top: 30px;
@@ -620,18 +620,22 @@ p {
   }
   .headline-body {
     width: 400px;
+    margin: 0 auto;
   }
   .headline-body-title, .headline-body-text {
     max-width: 100%;
+    margin-left: 10px;
   }
   .headline-contForm {
     width: 400px;
+    margin: 20px auto;
+    padding-left: 10px;
   }
   .servicos h2 {
     font-size: 1.75rem;
   }
   .servicos-vantagens-body-text {
-    width: 300px;
+    width: 100%;
   }
   .chamada {
     flex-direction: column;

@@ -170,6 +170,7 @@ p
   &-contForm
     //960 - 566 = 384 - 20px de margin
     flex: 1 1 364px
+    max-width: 100%
 
   &-form
     margin-right: 10px
@@ -484,7 +485,6 @@ p
     &-vantagens
       &-body-text
         width: 600px
-        max-width: 100%
     &-chamada
       margin-top: 30px
 
@@ -561,16 +561,21 @@ p
     align-items: center
     &-body
       width: 400px
+      margin: 0 auto
       &-title,&-text
         max-width: 100%
+        margin-left: 10px
     &-contForm
       width: 400px
-      
+      margin: 20px auto
+      padding-left: 10px
+
+
   .servicos
     h2
       font-size: 1.75rem
   .servicos-vantagens-body-text
-    width: 300px
+    width: 100%
   .chamada
     flex-direction: column
     justify-content: center
@@ -583,6 +588,6 @@ p
         font-size: 1.75rem
       p
         font-size: 1rem
-      
+
     &-acao
       flex: 1 1 100%
