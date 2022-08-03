@@ -646,6 +646,7 @@ p {
     flex: 1 1 100%;
     margin-bottom: 40px;
     text-align: center;
+    padding: 10px 0 0 10px;
   }
   .chamada-text h2 {
     font-size: 1.75rem;
