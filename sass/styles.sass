@@ -1,0 +1,588 @@
+@use 'variables'
+// @use 'mixins'
+
+*
+  font-family: 'Roboto'
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  list-style: none
+  text-decoration: none
+
+p
+  font-size: 1rem
+
+.ring-bg
+  position: fixed
+  z-index: 999
+  width: 100%
+  height: 100%
+  background: variables.$primary-color
+.ring
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 150px
+  height: 150px
+  background: transparent
+  border: 3px solid #3c3c3c
+  border-radius: 50%
+  text-align: center
+  line-height: 150px
+  letter-spacing: 4px
+  font-size: 1.25rem
+  color: variables.$text-color
+  text-transform: uppercase
+  text-shadow: 0 0 10px variables.$text-color
+  box-shadow: 0 0 20px rgba(0,0,0,.5)
+
+  &-span
+    display: block
+    position: absolute
+    top: calc(50% - 2px)
+    left: 50%
+    width: 50%
+    height: 4px
+    background: transparent
+    transform-origin: left
+    animation: animate 2s linear infinite
+
+  &-span::before
+    content: ''
+    position: absolute
+    width: 16px
+    height: 16px
+    border-radius: 50%
+    background: variables.$text-color
+    top: -6px
+    right: -8px
+    box-shadow: 0 0 20px variables.$text-color
+
+  @keyframes spin
+    0%
+      transform: rotate(0deg)
+    100%
+      transform: rotate(360deg)
+  @keyframes animate
+    0%
+      transform: rotate(45deg)
+    100%
+      transform: rotate(405deg)
+
+.ring::before
+  content: ''
+  position: absolute
+  top: -3px
+  left: -3px
+  width: 100%
+  height: 100%
+  border: 3px solid transparent
+  border-top: 3px solid variables.$text-color
+  border-right: 3px solid variables.$text-color
+  border-radius: 50%
+  animation: spin 2s linear infinite
+
+.superinfo-bg
+  background: variables.$primary-color
+
+.superinfo
+  font-weight: 400
+  max-width: variables.$container-width
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+  padding-top: 10px
+
+  p,a
+    margin: 0 10px 10px 10px
+    color: variables.$text-color
+.menu-bg
+  background: variables.$secundary-color
+
+.menu
+  max-width: variables.$container-width
+  margin: 0 auto
+  padding: 20px 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+
+  &-logo a
+    color: variables.$text-color
+    font-size: 2.25rem
+    font-weight: bold
+    margin: 0 10px
+
+  &-nav
+    ul
+      display: flex
+      flex-wrap: wrap
+
+      li
+        a
+          font-size: 1.25rem
+          display: block
+          padding: 10px
+          color: variables.$text-color
+          position: relative
+
+        a::after
+          position: absolute
+          content: ""
+          display: block
+          background: variables.$text-color
+          text-align: center
+          height: 3px
+          width: 0
+          bottom: 0
+          left: 50%
+          transition-duration: 0.6s
+        a:hover::after
+          width: 100%
+          left: 0
+
+.headline-bg
+  background: variables.$secundary-color
+.headline
+  max-width: variables.$container-width
+  margin: 0 auto
+  padding: 20px 0 80px 0
+  display: flex
+  flex-wrap: wrap
+
+  &-body
+    //960*0,6 = 576 - 10px de margin
+    flex: 1 1 566px
+    margin: 0 10px
+
+    &-title
+      color: variables.$text-color
+      margin: 20px 0
+      font-size: 3rem
+      line-height: 4.5rem
+      font-weight: 900
+
+    &-text
+      color: variables.$text-color
+      max-width: 85%
+  &-contForm
+    //960 - 566 = 384 - 20px de margin
+    flex: 1 1 364px
+
+  &-form
+    margin-right: 10px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    gap: 10px
+    border-radius: 5px
+    padding: 20px 20px 40px 20px
+    background: variables.$text-color
+
+    &-title
+      color: variables.$primary-color
+      text-align: center
+      margin-bottom: 20px
+      font-size: 2rem
+      font-weight: 900
+    a
+      color: variables.$text-color
+      text-align: center
+      margin: 20px 0 20px 0
+      font-size: 1.5rem
+      font-weight: 900
+      padding: 10px 30px
+      background: variables.$primary-color
+      border-radius: 5px
+    a:hover
+      color: variables.$primary-color
+      background: #000
+
+    &-group
+      position: relative
+
+      &-input
+        width: 100%
+        padding: 10px
+        border: 1px solid
+        border-radius: 5px
+        outline: none
+        color: black
+        font-size: 1rem
+        transition: 0.5s
+
+      &-label
+        position: absolute
+        left: 0
+        padding: 10px
+        pointer-events: none
+        text-transform: uppercase
+        transition: 0.5s
+        color: variables.$primary-color
+        font-weight: bold
+
+      &-input:valid ~ &-label,
+      &-input:focus ~ &-label
+        transform: translateX(10px) translateY(-7px)
+        font-size: 0.65rem
+        padding: 0 10px
+        background: variables.$text-color
+        border-left: 2px solid variables.$primary-color
+        border-right: 2px solid variables.$primary-color
+        letter-spacing: 0.1rem
+
+      &-input:focus
+        border: 2px solid variables.$primary-color
+
+      textarea
+        width: 100%
+        resize: none
+        box-sizing: border-box
+        font-size: 1rem
+        height: 150px
+        border-radius: 5px
+        padding: 10px
+        outline: none
+      textarea::placeholder
+        font-weight: bold
+        color: variables.$primary-color
+
+      textarea:focus
+        border: 2px solid variables.$primary-color
+.sobre
+  max-width: variables.$container-width
+  margin: 0 auto
+  padding: 60px 0 40px 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+  &-container
+    //Imagens com 50% do conteiner 
+    margin: 0 10px
+    max-width: 460px
+    max-height: 300px
+    &-img
+      max-width: 100%
+      max-height: 100%
+      border-radius: 5px
+
+    &-title
+      margin: 40px 0 20px 30px
+      font-size: 3rem
+      line-height: 4.5rem
+      font-weight: 900
+    &-text
+      margin-left: 30px
+      margin-bottom: 20px
+      letter-spacing: 0.1rem
+      line-height: 24px
+
+.servicos-bg
+  background: variables.$secundary-color
+.servicos
+  max-width: variables.$container-width
+  display: flex
+  flex-wrap: wrap
+  margin: 0 auto
+  padding-bottom: 80px
+
+  h2
+    font-size: 3rem
+    line-height: 4.5rem
+    margin: 60px 0 60px 0
+    flex: 1 1 100%
+    text-align: center
+
+  &-vantagens
+    flex: 1 1 400px
+    margin: 0 10px 40px 10px
+    display: flex
+    flex-wrap: nowrap
+    align-items: center
+    justify-content: center
+
+    img
+      max-width: 150px
+      max-height: 75px
+      border-radius: 5px
+    &-body
+      flex-direction: column
+      margin-left: 20px
+      &-title
+        margin-bottom: 5px
+        font-size: 1.25rem
+        line-height: 1.875rem
+        font-weight: 900
+
+      &-text
+        width: 350px
+        max-width: 100%
+        font-size: 0.875rem
+        line-height: 24px
+
+  &-chamada
+    margin-top: 60px
+    flex: 1 1 100%
+    text-align: center
+    a
+      color: variables.$text-color
+      margin-bottom: 20px
+      font-size: 1.25rem
+      font-weight: 900
+      padding: 10px 40px
+      background: variables.$primary-color
+      border-radius: 5px
+.faq
+  max-width: variables.$container-width
+  display: flex
+  flex-wrap: wrap
+  margin: 0 auto
+  align-items: center
+  justify-content: center
+  padding: 60px 100px 80px 100px
+
+  &-title
+    font-size: 3rem
+    line-height: 4.5rem
+    font-weight: 900
+    margin-bottom: 50px
+  &-acordion
+    max-width: 100%
+
+    &-content
+      position: relative
+      margin: 10px 20px
+      &-label
+        position: relative
+        padding: 10px
+        background: variables.$primary-color
+        color: variables.$text-color
+        cursor: pointer
+        border-radius: 5px
+        padding: 15px 0 15px 30px
+
+      &-label::before
+        content: '+'
+        position: absolute
+        top: 50%
+        right: 20px
+        transform: translateY(-50%)
+        font-size: 1.5rem
+        font-weight: bold
+
+      &.active &-label::before
+        content: "-"
+
+      &-text
+        position: relative
+        background: variables.$secundary-color
+        color: variables.$text-color
+        height: 0
+        overflow: hidden
+        transition: 0.5s
+        overflow-y: auto
+
+      &.active &-text
+        height: 150px
+        padding: 20px
+
+.chamada-bg
+  background: variables.$secundary-color
+.chamada
+  max-width: variables.$container-width
+  display: flex
+  flex-wrap: wrap
+  margin: 0 auto
+  padding: 80px 10px 80px 10px
+
+  &-text
+    flex: 1 1 460px
+    max-width: 100%
+    max-height: 100%
+    padding: 50px 60px 0 10px
+    h2
+      font-size: 3.5rem
+      font-weight: 900
+      margin-bottom: 20px
+    p
+      font-size: 1.125rem
+  &-acao
+    border-radius: 5px
+    background: #fff
+    padding: 40px 60px 40px 60px
+    flex: 1 1 460px
+    text-align: center
+
+    &-descricao
+      margin-bottom: 40px
+
+    &-btn
+      color: variables.$text-color
+      font-size: 1.25rem
+      font-weight: 900
+      padding: 10px 80px
+      background: variables.$primary-color
+      border-radius: 5px
+
+    &-contato
+      padding: 0 10px 0 10px
+      font-size: 0.825rem
+      margin-top: 20px
+
+.footer-bg
+  background: variables.$primary-color
+.footer
+  max-width: variables.$container-width
+  display: flex
+  flex-wrap: wrap
+  margin: 0 auto
+  align-items: center
+  justify-content: center
+  padding: 30px 0
+
+  &-direitos
+    text-align: center
+    flex: 1 1 100%
+    margin-bottom: 15px
+  &-termos
+    display: flex
+    flex-direction: row
+    gap: 5px
+
+//Medias
+
+@media screen and (max-width: 980px)
+  .headline
+    &-body
+      width: 960px
+      max-width: 100%
+      flex: 1 1 45%
+      justify-content: center
+      align-items: center
+      margin-bottom: 40px
+      &-title
+        font-size: 2.25rem
+        line-height: 3.375rem
+    &-contForm
+      flex: 1 1 35%
+    &-form
+      padding: 20px 20px 20px 20px
+      &-title
+        font-size: 1.5rem
+      a
+        font-size: 1.25rem
+
+  .sobre
+    &-container
+      max-width: 330px
+  .servicos
+    h2
+      margin: 60px 0 30px 0
+    &-vantagens
+      &-body-text
+        width: 600px
+        max-width: 100%
+    &-chamada
+      margin-top: 30px
+
+  .faq-acordion-content-label
+    padding: 15px 60px 15px 30px
+
+  .chamada
+    &-text
+      flex: 1 1 340px
+      h2
+        font-size: 2.25rem
+    &-acao
+      flex: 1 1 340px
+      padding: 40px 30px 40px 30px
+      &-btn
+        padding: 10px 40px
+
+@media screen and (max-width: 720px)
+  .headline
+    &-body
+      flex: 1 1 45%
+      justify-content: center
+      align-items: center
+      margin-bottom: 40px
+      &-title
+        font-size: 1.75rem
+        line-height: 2.625rem
+    &-contForm
+    &-form
+      &-title
+        font-size: 1.25rem
+      a
+        font-size: 1rem
+      &-group
+        textarea
+          height: 100px
+        textarea::placeholder
+          font-size: 0.75rem
+        &-label
+          font-size: 0.75rem
+  .sobre
+    justify-content: space-around
+    &-container
+      width: 300px
+      &-title
+        margin: 0 auto
+        font-size: 1.75rem
+      &-text
+        margin: 0 auto
+  .servicos-vantagens-body-text
+    width: 400px
+  .faq
+    padding: 60px 50px 80px 50px
+    &-title
+      font-size: 1.75rem
+
+  .chamada
+    padding: 40px 10px 40px 10px
+    &-text
+      flex: 1 1 250px
+      padding: 10px 60px 0 10px
+    &-acao
+      flex: 1 1 250px
+      padding: 40px 10px 40px 10px
+      &-btn
+        font-size: 1rem
+@media screen and (max-width: 560px)
+  .superinfo
+    a
+      display: none
+  .headline
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &-body
+      width: 400px
+      &-title,&-text
+        max-width: 100%
+    &-contForm
+      width: 400px
+      
+  .servicos
+    h2
+      font-size: 1.75rem
+  .servicos-vantagens-body-text
+    width: 300px
+  .chamada
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &-text
+      flex: 1 1 100%
+      margin-bottom: 40px
+      text-align: center
+      h2
+        font-size: 1.75rem
+      p
+        font-size: 1rem
+      
+    &-acao
+      flex: 1 1 100%
