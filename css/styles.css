@@ -13,10 +13,10 @@ p {
 
 .ring-bg {
   position: fixed;
-  z-index: 999;
   width: 100%;
   height: 100%;
   background: #F57F17;
+  z-index: 2000;
 }
 
 .ring {
@@ -92,7 +92,12 @@ p {
 }
 
 .superinfo-bg {
+  position: fixed;
+  width: 100%;
   background: #F57F17;
+  z-index: 100;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .superinfo {
@@ -101,7 +106,6 @@ p {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding-top: 10px;
 }
 .superinfo p, .superinfo a {
   margin: 0 10px 10px 10px;
@@ -109,13 +113,17 @@ p {
 }
 
 .menu-bg {
+  position: fixed;
+  width: 100%;
+  top: 60px;
+  z-index: 100;
   background: #F9A825;
 }
 
 .menu {
   max-width: 960px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 10px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -131,14 +139,14 @@ p {
   display: flex;
   flex-wrap: wrap;
 }
-.menu-nav ul li a {
+.menu-nav ul li .nav-link {
   font-size: 1.25rem;
   display: block;
   padding: 10px;
   color: #FCF8F2;
   position: relative;
 }
-.menu-nav ul li a::after {
+.menu-nav ul li .nav-link::after {
   position: absolute;
   content: "";
   display: block;
@@ -150,9 +158,25 @@ p {
   left: 50%;
   transition-duration: 0.6s;
 }
-.menu-nav ul li a:hover::after {
+.menu-nav ul li .nav-link:hover::after {
   width: 100%;
   left: 0;
+}
+.menu-nav ul li .nav-link.active {
+  border-radius: 5px;
+  background: #F57F17;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+.menu-number {
+  background: #FCF8F2;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 10px 20px 10px 20px;
 }
 
 .headline-bg {
@@ -162,7 +186,7 @@ p {
 .headline {
   max-width: 960px;
   margin: 0 auto;
-  padding: 20px 0 80px 0;
+  padding: 154px 0 80px 0;
   display: flex;
   flex-wrap: wrap;
 }
@@ -202,7 +226,7 @@ p {
   font-size: 2rem;
   font-weight: 900;
 }
-.headline-form a {
+.headline-form .btn {
   color: #FCF8F2;
   text-align: center;
   margin: 20px 0 20px 0;
@@ -211,8 +235,11 @@ p {
   padding: 10px 30px;
   background: #F57F17;
   border-radius: 5px;
+  border: none;
+  transition: 0.5s;
+  cursor: pointer;
 }
-.headline-form a:hover {
+.headline-form .btn:hover {
   color: #F57F17;
   background: #000;
 }
@@ -267,6 +294,42 @@ p {
 }
 .headline-form-group textarea:focus {
   border: 2px solid #F57F17;
+}
+.headline-form-group #limitMsg {
+  position: absolute;
+  top: 135px;
+  right: 20px;
+  font-size: 0.75rem;
+  color: #808080;
+}
+
+.erro-geral {
+  background: #F57F17;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.erro-input {
+  border: 1px solid #F57F17;
+}
+
+.erro {
+  color: #F57F17;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.sucesso {
+  background: #2ac874;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 .sobre {
@@ -440,6 +503,7 @@ p {
   font-size: 3.5rem;
   font-weight: 900;
   margin-bottom: 20px;
+  color: #FCF8F2;
 }
 .chamada-text p {
   font-size: 1.125rem;
@@ -572,6 +636,9 @@ p {
   .headline-form-group-label {
     font-size: 0.75rem;
   }
+  .headline-form-group #limitMsg {
+    top: 80px;
+  }
   .sobre {
     justify-content: space-around;
   }
@@ -612,6 +679,65 @@ p {
 @media screen and (max-width: 560px) {
   .superinfo a {
     display: none;
+  }
+  #menu-link {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    right: 0;
+    height: 0;
+    transition: 0.6s;
+    z-index: 1001;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  .menu-nav.active #menu-link {
+    height: 200px;
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #btn-mobile {
+    margin-right: 10px;
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    background: #F9A825;
+  }
+  #hamburguer {
+    display: block;
+    border-top: 2px solid;
+    width: 20px;
+    color: #FCF8F2;
+  }
+  #hamburguer::after, #hamburguer::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin-top: 5px;
+    background: currentColor;
+    transition: 0.3s;
+    position: relative;
+  }
+  .menu-nav.active #hamburguer {
+    border-top-color: transparent;
+  }
+  .menu-nav.active #hamburguer::before {
+    transform: rotate(135deg);
+  }
+  .menu-nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+  .menu-nav ul li .nav-link.active {
+    border-radius: 0;
+    background: #F9A825;
+  }
+  .nav-link {
+    background: #F9A825;
   }
   .headline {
     flex-direction: column;
