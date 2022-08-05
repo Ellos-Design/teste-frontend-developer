@@ -62,7 +62,7 @@
                             <input maxlength="15" type="tel" name="txTel" id="txTel" placeholder="DDD + TELEFONE:">
                         </div>
                         <div>
-                            <textarea name="txDesc" id="txDesc" cols="30" rows="10" placeholder="COMO PODEMOS TE AJUDAR?"></textarea>
+                            <textarea name="txDesc" maxlength="500" id="txDesc" cols="30" rows="10" placeholder="COMO PODEMOS TE AJUDAR?"></textarea>
                         </div>
                         <div>
                             <button type="submit" class="button-chamada">Chamada para ação</button>

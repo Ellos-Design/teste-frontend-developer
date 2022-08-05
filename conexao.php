@@ -1,22 +1,22 @@
 <?php 
 
-    # Constantes de acesso ao Banco de Dados da Heroku
-    $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
     # Conexão com o Banco de Dados da Heroku
+    /*
+    # Constantes de acesso ao Banco de Dados da Heroku
+
+    $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
     define('USER', $cleardb_url["user"]);
     define('PASSWORD', $cleardb_url["pass"]);
     define('HOST',$cleardb_url["host"]);
     define('DB', substr($cleardb_url["path"], 1));
+    */
     
-
     # Conexão com o Banco de Dados LocalHost
-    /* 
     define('USER', 'root');
     define('PASSWORD', '');
     define('HOST', 'localhost');
     define('DB', 'bd_ellos_design');
-    */
         
     # Tenta se conectar com o Banco de Dados
     # Status 200 = Conexão bem sucedida
