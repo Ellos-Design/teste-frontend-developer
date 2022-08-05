@@ -1,53 +1,63 @@
-# Teste para estágio Frontend e Full-Stack
+# Descrição do Projeto
 
-## Sobre a Ellos Design
+## Funcionalidades
+* Dados enviados do formulário salvo no banco de dados
+* Disparo de e-mail após o usuário enviar os dados
+* ScrollSpy no menu para o usuario identificar em qual parte está.
 
-A **Ellos Design** é uma agência de marketing e criação de sites localizada em Guarulhos / SP. Somos uma empresa em constante evolução e sempre estamos abertos para pessoas que gostem de tecnologia e queiram trabalhar na área, mas que principalmente queiram aprender e crescer com a nossa empresa.
 
-## Sobre o teste
+## Deploy da Aplicação no Heroku
+<https://teste-php-fullstack.herokuapp.com/>
 
-Este é um teste prático que desenvolvemos para a avaliação dos candidatos participantes de nosso processo seletivo para vagas de Frontend ou Full-Stack.
+## Pré-requisitos
+* Necessário instalar um servidor web e o banco de dados MySQL, por exemplo, o Xamp.
+* Em necessidade de estilizar a página, instalar o pre-compilador sass:
+  > npm install -g sass
 
-## Tecnologias para o desafio
+## Como rodar aplicação
+* Após instalar o Xamp, no Disco local(C:), na pasta htdocs, crie seu projeto.
+  >C:\xampp\htdocs\meuprojeto
+* No terminal, Clone o projeto:
+```git clone https://github.com/Nathan-maya/teste-frontend-developer.git```
+>C:\xampp\htdocs\meuprojeto> ```git clone https://github.com/Nathan-maya/teste-frontend-developer.git ```
+* Há dois branch, master e melhoria(deploy no heroku). Para alternar digite:
+  >git checkout master
+  ou
+  >git checkout melhoria
+* Execute o Xamp(WampServer) e start o Apache e MySQL .
+* Abrir o phpmyadmin no localhost e importar o arquivo: 
+  >cliente.sql
+* Abrir no navegador:
+  >[localhost](http://localhost/)/meuprojeto
+* Dentro do projeto, na pasta class, abra config.php
+* Caso não esteja rodando em servidor local, altere a variável $modo='producao' e realize as alteracoes necessárias.
+~~~PHP
+<?php
+  //Configuração do banco de dados
 
-Você deve utilizar as seguintes tecnologias para o desenvolvimento do teste:
+  $modo='producao';
+  if($modo =='local'){
+    define('SERVIDOR','localhost');
+    define('USUARIO','root');
+    define('SENHA','');
+    define('BANCO','cliente');  
+  }
 
-- HTML5
-- CSS
-- JavaScript ou jQuery
-- PHP (Para Full-Stack)
-- MySQL (Para Full-Stack)
+  if($modo == 'producao'){
+    define('SERVIDOR','cxmgkzhk95kfgbq4.cbetxkdyhwsb.us-east-1.rds.amazonaws.com');
+    define('USUARIO','ot1q1lq6t7drvnot');
+    define('SENHA','x122sooh9983z6dy');
+    define('BANCO','iz0kffffflhvreu9');
+  }
+~~~
+* Para configurar o php mailer, basta colocar um e-mail valido
+~~~PHP
+ $mail->
+        $mail->Host       = 'smtp.gmail.com';                   //definindo SMTP server de envio
+        $mail->SMTPAuth   = true;                                   
+        $mail->Username   = 'email@gmail.com';                     //login do email 
+        $mail->Password   = 'password';                               //senha de app
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
+        $mail->Port       = 465;
+~~~
 
-## O que nos impressionaria no teste
-
-- Utilização de um pré-processador para o CSS (De preferência o Sass)
-- Aplicação de animações em CSS (Ex: Animações ao realizar scroll)
-- Ver o teste rodando em live (Bucket estático S3, Heroku, Firebase Hosting, etc)
-- Documentação do projeto (Com instruções para executar)
-
-## O que avaliaremos no seu teste
-
-- Criatividade
-- Organização do código
-- Performance do código
-- Boas práticas de desenvolvimento
-- Documentação do código
-- Adaptação mobile (layout responsivo)
-- Documentação do projeto (Com instruções para executar)
-
-## Etapas para realização do teste
-
-- Faça um [fork](https://github.com/Ellos-Design/teste-frontend-developer/fork) desse projeto em sua conta do GitHub
-- Realize o desafio proposto
-- Faça um push para seu repositório com o desafio implementado
-- Envie um email para (vagas@ellosdesign.com.br) com a URL do seu projeto avisando que você concluiu o teste
-
-## O desafio
-
-Você deverá desenvolver uma landing page seguindo a estrutura exibida na imagem abaixo. Você pode utilizar os textos e imagens de sua preferência para a criação da página.
-
-#### Full-Stack
-
-Deixar o formulário da landing page funcional, onde ao preencher as informações e clicar para enviar, o formulário será submetido e os dados deverão ser gravados em um banco de dados (Neste caso será necessário nos enviar o arquivo SQL para podermos implementar o banco para avaliação do teste).
-
-![Template da página a ser desenvolvida](https://github.com/Ellos-Design/teste-frontend-developer/blob/master/wireframe.png?raw=true)
