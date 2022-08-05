@@ -1,0 +1,81 @@
+@media screen and (max-width: 850px) {
+    .main-background {
+        min-height: 900px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    header .container {
+        flex-direction: row !important;
+    }
+    
+    main .headline-wrapper {
+        margin-right: 0px;
+        margin-bottom: 16px;
+    }
+    main .headline-wrapper .headline,
+    main .headline-wrapper .subtitle {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    section#about-us .image-about-us {
+        width: 90%;
+        border-radius: 6px;
+        background-image: url(../img/loop1.jpg);
+        height: 400px;
+        background-size: cover;
+    }
+    section#about-us .about-us-text .title {
+        margin: 12px 0;
+        color: #FD6E26;
+        font-size: 32px;
+        text-align: center;
+    }
+    section#about-us .about-us-text {
+        margin-left: 0px;
+        width: 90%;
+    }
+
+    section#frequent-asks .item-ask {
+        width: 100%;
+    }
+
+    section#last-call .text-last-call .call {
+        color: white;
+        font-size: 48px;
+        text-align: center;
+    }
+    section#last-call .text-last-call .subtitle {
+        width: 100%;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 12px;
+        color: white;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    section#info-service .container-services {
+        flex-direction: column;
+    }
+    section#info-service .item {
+        margin-top: 0px;
+        margin-bottom: 24px;
+    }
+    section#info-service .container > .title {
+        margin-bottom: 24px;
+    }
+    section#info-service .item .subtitle {
+        width: 100%;
+    }
+    section#info-service a {
+        width: 65%;
+    }
+}
+
