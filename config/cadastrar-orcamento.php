@@ -11,7 +11,7 @@
     }
 
     # Definido uma constante com o nome da Tabela utilizada
-    define('TABLE_ORCAMENTO', 'tbOrcamento');
+    define('TABLE_ORCAMENTO', 'tb_orcamento');
 
     # Resgatando dados do fórmulario
     $nomeCliente = $_POST['txName'];

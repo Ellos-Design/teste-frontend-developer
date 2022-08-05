@@ -60,7 +60,13 @@
 }
 
 @media screen and (max-width: 650px) {
-
+    main .headline-wrapper .headline {
+        font-size: 44px;
+    }
+    main .headline-wrapper .subtitle {
+        width: 100%;
+        margin-top: 12px;
+    }
     section#info-service .container-services {
         flex-direction: column;
     }

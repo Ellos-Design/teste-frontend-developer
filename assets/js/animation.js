@@ -47,7 +47,7 @@ $(document).ready(function () {
 
 
 /*
-    Otimização da animação Scroll
+    Utilizado para otimizar a animação Scroll
     É responsável por disparar as funções definidas com intervalos e não a todo momento
 */
 const DEBOUNCE = function(func, wait, immediate) {
@@ -74,7 +74,7 @@ const ANIMATION_CLASS_NAME = 'animate';
 function animationScroll() {
     const windowTop = window.pageYOffset + window.innerHeight * 0.9;
 
-    $('[data-anime]').each(function(index, element){
+    $('[scroll-anim]').each(function(index, element){
         if((windowTop) > element.offsetTop) {
             $(element).addClass(ANIMATION_CLASS_NAME);
         } else {
