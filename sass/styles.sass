@@ -123,45 +123,14 @@ p
     font-weight: bold
     margin: 0 10px
 
-  &-nav
-    ul
-      display: flex
-      flex-wrap: wrap
 
-      li
-        .nav-link
-          font-size: 1.25rem
-          display: block
-          padding: 10px
-          color: variables.$text-color
-          position: relative
-
-        .nav-link::after
-          position: absolute
-          content: ""
-          display: block
-          background: variables.$text-color
-          text-align: center
-          height: 3px
-          width: 0
-          bottom: 0
-          left: 50%
-          transition-duration: 0.6s
-        .nav-link:hover::after
-          width: 100%
-          left: 0
-        .nav-link.active
-          border-radius: 5px
-          background: variables.$primary-color
-
-#btn-mobile
-  display: none
 .menu-number
   background: variables.$text-color
   border-radius: 5px
   font-weight: bold
   margin-right: 10px
   padding: 10px 20px 10px 20px
+  color: #707070
 
 .headline-bg
   background: variables.$secundary-color
@@ -467,6 +436,7 @@ p
       color: variables.$text-color
     p
       font-size: 1.125rem
+      color: variables.$text-color
   &-acao
     border-radius: 5px
     background: #fff
@@ -616,61 +586,6 @@ p
 // Media ate 560px
 
 @media screen and (max-width: 560px)
-  .superinfo
-    a
-      display: none
-  #menu-link
-    display: block
-    position: absolute
-    width: 100%
-    top: 60px
-    right: 0
-    height: 0
-    transition: .6s
-    z-index: 1001
-    visibility: hidden
-    overflow-y: hidden
-
-  .menu-nav.active #menu-link
-    height: 200px
-    visibility: visible
-    overflow-y: auto
-
-  #btn-mobile
-    margin-right: 10px
-    display: flex
-    padding: .5rem 1rem
-    font-size: 1rem
-    border: none
-    cursor: pointer
-    background: variables.$secundary-color
-  #hamburguer
-    display: block
-    border-top: 2px solid
-    width: 20px
-    color: variables.$text-color
-  #hamburguer::after,#hamburguer::before
-    content: ''
-    display: block
-    width: 20px
-    height: 2px
-    margin-top: 5px
-    background: currentColor
-    transition: .3s
-    position: relative
-  .menu-nav.active #hamburguer
-    border-top-color: transparent
-  .menu-nav.active #hamburguer::before
-    transform: rotate(135deg)
-  .menu-nav.active #hamburguer::after
-    transform: rotate(-135deg)
-    top: -7px
-
-  .menu-nav ul li .nav-link.active
-    border-radius: 0
-    background: variables.$secundary-color
-  .nav-link
-    background: variables.$secundary-color
 
   .headline
     flex-direction: column

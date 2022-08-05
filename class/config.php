@@ -25,5 +25,3 @@
     $dados = htmlspecialchars($dados);
     return $dados;
   }
-
-?>

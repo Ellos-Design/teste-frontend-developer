@@ -124,19 +124,11 @@ if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['telefone'])
         <a href="#">Design</a>
       </div>
 
-      <!-- links de navegacao -->
-      <nav class="menu-nav">
-        <!-- botão mobile aparece em ate 560px, depois display none -->
-        <button id="btn-mobile"> <span id="hamburguer"></span></button>
-
-        <!-- area de todos os links do menu -->
-        <ul id="menu-link">
-          <li><a class="nav-link active" href="#home">Home</a></li>
-          <li><a class="nav-link" href="#sobre">Sobre</a></li>
-          <li><a class="nav-link" href="#servicos">Servicos</a></li>
-          <li><a class="nav-link" href="#faq">FAQ</a></li>
-        </ul>
-      </nav>
+      <div class="menu-number">
+        <p>(48)9 9999-9999</p>
+      </div>
+      </div>
+      
     </div>
 
   </header>
@@ -403,9 +395,6 @@ if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['telefone'])
   <!-- carregamento dos scripts necessarios                             -->
   <script src="js/loader.js"></script>
   <script src="js/accordion.js"></script>
-  <script src="js/scrollspy.js"></script>
-  <script src="js/scrollSuave.js"></script>
-  <script src="js/menu.js"></script>
   <script src="js/contCaracteres.js"></script>
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/jquery.mask.js"></script>
