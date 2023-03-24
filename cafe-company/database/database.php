@@ -2,7 +2,7 @@
 
     $mysqli = new mysqli();
 
-    $mysqli->connect("localhost","root","","clientes");
+    $mysqli->connect("localhost","id20498484_cafecompany","Cany<cafe1234","id20498484_cliente","3306");
 
     /*
     if (mysqli_connect_errno()){

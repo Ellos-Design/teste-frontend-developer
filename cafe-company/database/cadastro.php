@@ -22,15 +22,17 @@
             $mensagem = $_POST['mensagem'];
 
             $sql = "INSERT INTO cliente values('$nome','$email','$telefone','$mensagem')";
-
-            $result = $mysqli->query($sql);
+            
             /*
-        if(!$result or $mysqli->affected_rows != 1){
-            echo "tudo errado";
-        }else{
-            echo "tudo certo com sucesso!";
-        } 
-        */
+            $result = $mysqli->query($sql);
+
+            
+            if (!$result or $mysqli->affected_rows != 1) {
+                echo "tudo errado";
+            } else {
+                echo "tudo certo com sucesso!";
+            }
+            */
         }
         ?>
         <!--HERO-Section-Inicio-->
