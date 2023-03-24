@@ -1,0 +1,17 @@
+h1 {
+    font-size: var(--font-size-h1);
+    text-transform: uppercase;
+
+    &.display-1 {
+        font-weight: 700;
+        line-height: 50px;
+        font-size: calc(var(--font-size-h1) + 0.9rem);
+        text-transform: uppercase;
+      }
+
+      &.display-2 {
+        font-weight: 800;
+        line-height: 50.94px;
+        font-size: calc(var(--font-size-h1) + 0.1rem);
+      }
+  }

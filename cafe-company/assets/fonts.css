@@ -1,0 +1,74 @@
+@import url(style.css);
+
+:root {
+  --font-size-h1: 2.25rem;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  text-transform: uppercase;
+  word-wrap: break-word;
+  width: 100%;
+}
+
+h2 {
+  font-size: calc(var(--font-size-h1) - 0.6rem);
+  text-transform: uppercase;
+}
+
+h1.display-1 {
+  font-weight: 700;
+  line-height: 50px;
+  font-size: calc(var(--font-size-h1) + 0.9rem);
+  text-transform: uppercase;
+}
+
+h1.display-2 {
+  font-weight: 800;
+  line-height: 50.94px;
+  font-size: calc(var(--font-size-h1) + 0.1rem);
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+summary h2{
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+@media (min-width: 900px) {
+  :root {
+    --font-size-h1: 3.3rem;
+  }
+  h1 {
+    font-size: var(--font-size-h1);
+  }
+
+  h2 {
+    font-size: calc(var(--font-size-h1) - 1.6rem);
+  }
+
+  h1.display-1 {
+    font-weight: 700;
+    line-height: 74.94px;
+    font-size: calc(var(--font-size-h1) + 2rem);
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.15rem;
+    line-height: 1.7rem;
+  }
+}

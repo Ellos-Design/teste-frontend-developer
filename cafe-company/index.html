@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Company - O melhor café de São Paulo.</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/accordion.css">
+    <link rel="icon" href="assets/favicon/favicon.ico">
+</head>
+
+<body>
+    <main>
+        <!--HERO-Section-Inicio-->
+        <section class="background-coffe container">
+            <header>
+                <nav>
+                    <a href="#">
+                        <h1><img src="assets/img/logo-offwhite.png" alt="Café Company."></h1>
+                    </a>
+                    <address>
+                        <a href="#" class="btn">(11) 91625-5489</a>
+                    </address>
+                </nav>
+            </header>
+            <section class="hero">
+                <article>
+                    <h1 class="display-1">Começe o seu dia com café</h1>
+                    <p>O melhor café de São Paulo, direto para o conforto da sua cozinha, com o melhor preço do mercado.
+                    </p>
+                </article>
+                <aside class="formulario-section">
+                    <div class="formulario">
+                        <h2>Compre seu café com a gente!</h2>
+                        <form method="post" action="database/cadastro.php">
+                            <ul>
+                                <li>
+                                    <label for="nome">Nome</label>
+                                    <input type="text" id="nome" name="nome" placeholder="insira seu nome" required>
+                                </li>
+                                <li>
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" placeholder="seu melhor e-mail"
+                                        required>
+                                </li>
+                                <li>
+                                    <label for="telefone">Telefone</label>
+                                    <input type="tel" id="telefone" name="telefone"
+                                        pattern="([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}"
+                                        placeholder="ddd + telefone" minlength="11" maxlength="11" required>
+                                </li>
+                                <li>
+                                    <label for="mensagem">Mensagem</label>
+                                    <textarea name="mensagem" id="mensagem" placeholder="como podemos te ajudar?"
+                                        maxlength="512" required></textarea>
+                                </li>
+                                <button type="submit" name="submit" class="btn">Realizar Pedido</button>
+                            </ul>
+                        </form>
+                    </div>
+                </aside>
+            </section>
+        </section>
+
+        <!--Sobre-Section-->
+        <section class="container">
+            <section class="sobre">
+                <article>
+                    <h1 class="display-2">Nossa história</h1>
+                    <div class="divisor">
+                        <img src="assets/img/before.png" alt="Grão de café">
+                    </div>
+                    <p>Plantamos todos os dias desde 1997 o melhor café de São Paulo. Estamos há mais de duas décadas
+                        plantando em Mococa/Ribeirão Preto, nossas fazendas e plantações se estende por mais de 5
+                        hectares e
+                        são divididos em sua maioria por plantação de café e criação de gado.</p>
+                </article>
+                <section>
+                    <img class="imagem-plantacao" src="assets/img/sobre.png"
+                        alt="Imagem da plantação de café, da Café Company.">
+                </section>
+            </section>
+        </section>
+
+        <!--Benefícios-Section-->
+        <section class="container">
+            <section class="beneficios">
+                <article>
+                    <h1 class="display-2">Benefícios comprando conosco</h1>
+                    <div class="divisor">
+                        <img src="assets/img/before.png" alt="Grão de café">
+                    </div>
+                </article>
+                <section class="container flex-itens">
+                    <div class="itens">
+                        <img src="assets/img/quality.png" alt="Medalha de qualidade.">
+                        <h2>Produto orgânico de qualidade</h2>
+                        <p>nossos produtos orgânicos tem qualidade pois são retidados da planatação tratatod e enviados
+                            na
+                            hora
+                            para o cliente.</p>
+                    </div>
+                    <div class="itens">
+                        <img src="assets/img/delivery.png" alt="Caminhão rápido.">
+                        <h2>Entrega eficiênte</h2>
+                        <p>Todos os produtos são entregues no mesmo dia em que são embalados, chegando fresquinho com
+                            aroma
+                            da
+                            fazenda.</p>
+                    </div>
+                    <div class="itens">
+                        <img src="assets/img/handshake.png" alt="Aperto de mãos.">
+                        <h2>Confiança desde o primeiro grão</h2>
+                        <p>todos os processos e produtos são verificados, bem armazenados e conferidos de tempos em
+                            tempos,
+                            e na
+                            entrega o cliente que faz a conferência do produto.</p>
+                    </div>
+                </section>
+                <a href="#formulario" class="btn">Realizar Pedido</a>
+            </section>
+        </section>
+
+        <!--Perguntas-Section-->
+        <section class="container">
+            <section class="perguntas">
+                <article>
+                    <h1 class="display-2">Perguntas frequentes</h1>
+                    <div class="divisor">
+                        <img src="assets/img/before.png" alt="Grão de café">
+                    </div>
+                </article>
+                <section>
+                    <details>
+                        <summary><h2>Como faço para comprar?</h2></summary>
+                        <p>
+                            Nossos produtos são vendidos através dessa página, você pode entrar em contato conosco,
+                            enviando
+                            seu
+                            pedido através do formulário no topo do site, logo entraremos em contato para finalizar o
+                            pedido.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary><h2>Quando vou receber os pedidos?</h2></summary>
+                        <p>
+
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus, dolor gravida
+                            condimentum maximus, ipsum dolor dapibus enim, nec scelerisque ex ante vitae augue. Sed
+                            aliquam sagittis ligula sed fermentum. In urna ligula, varius a sapien ac, fermentum gravida
+                            dolor. Etiam nec enim sed magna sagittis mollis non vitae est. Cras vel nisl vel felis
+                            ultrices suscipit. Nullam accumsan est vel tempus tincidunt. Sed lectus turpis, fermentum at
+                            augue et, malesuada dapibus neque. Nam iaculis dui non tempus scelerisque. Maecenas vel
+                            lacus accumsan, interdum nisi non, dictum leo. Etiam at dui id leo molestie vulputate a sit
+                            amet enim. Suspendisse imperdiet fermentum lorem, vel finibus dui faucibus non.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary><h2>Onde fica localizada a loja ?</h2></summary>
+                        <p>
+                            Sed venenatis nisi eu nisl ullamcorper imperdiet. Suspendisse potenti. Cras dictum odio non
+                            lacinia volutpat. Nunc suscipit fringilla purus, nec tempor odio
+                            consectetur aliquam. Curabitur semper arcu fringilla pellentesque convallis. In molestie,
+                            velit a mattis ultricies, sapien metus tincidunt augue, a suscipit augue risus finibus dui.
+                            Fusce pharetra justo ut dolor sodales, in viverra velit ultrices. Phasellus ac enim quis
+                            enim porttitor iaculis.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary><h2>Posso ir buscar os produtos ?</h2></summary>
+                        <p>
+                            Vivamus sit amet sem suscipit, euismod ligula nec, convallis sem. Praesent ac nulla
+                            pharetra, tempor lacus sed, varius ligula. Cras non augue sed metus venenatis posuere eget
+                            eu magna. Vestibulum sitamet varius est, lobortis tincidunt sem. Vivamus elementum felis sed
+                            augue dignissim, eget
+                            rutrum mauris viverra. Duis tincidunt tincidunt interdum. Proin eget tortor pulvinar,
+                            fringilla mi ac, tincidunt orci. Donec euismod neque suscipit nibh porta, sit amet eleifend
+                            quam tincidunt. Nulla facilisi. Curabitur lobortis sollicitudin pellentesque. Ut hendrerit
+                            consequat mattis.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary><h2>Como faço para ser revendedor ?</h2></summary>
+                        <p>
+                            Suspendisse ultricies et tortor sed euismod. Curabitur erat est, vulputate id placerat id,
+                            finibus vehicula lorem. Vestibulum tristique imperdiet libero. Vestibulum volutpat gravida
+                            semper. Sollicitudin metus, eu sodales lectus eros vel lacus. Cras ornare turpis vel neque
+                            accumsan
+                            tristique. Fusce lacinia posuere arcu, in consequat neque mollis eget.
+                        </p>
+                    </details>
+                </section>
+            </section>
+        </section>
+
+        <!--CallToAction-Section-->
+        <section class="container">
+            <section class="chamada">
+                <article>
+                    <h1 class="display-1">Cheirinho de <u>café</u></h1>
+                    <p>Já pediu o melhor café de São Paulo para perfurmar sua cozinha e aquecer seus dias?</p>
+                </article>
+                <aside class="callToAction">
+                    <h2>Compre seu café com a gente!</h2>
+                    <a href="#formulario" class="btn">Realizar Pedido</a>
+                    <p>Podemos enviar seu café ainda hoje*</p>
+                </aside>
+            </section>
+        </section>
+
+        <!--footer-Section-->
+        <footer class="container footer">
+            <img src="assets/img/logo-offwhite.png" alt="Logo Café Company">
+            <p>Café Company © Todos os Direitos Reservados - 2023</p>
+            <p>CNPJ: 99.999.999 - 0009-99 TERMOS DE USO</p>
+        </footer>
+    </main>
+</body>
+
+</html>
