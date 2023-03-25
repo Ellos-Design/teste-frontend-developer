@@ -1,53 +1,26 @@
 # Teste para estágio Frontend e Full-Stack
 
-## Sobre a Ellos Design
+## Sobre o Teste
 
-A **Ellos Design** é uma agência de marketing e criação de sites localizada em Guarulhos / SP. Somos uma empresa em constante evolução e sempre estamos abertos para pessoas que gostem de tecnologia e queiram trabalhar na área, mas que principalmente queiram aprender e crescer com a nossa empresa.
+A **Ellos Design**, me dasafiou nessa estapa da entrevista a criar um site do zero, seguindo um wireframe de um site.</br>
+Tive então que:
+ - Protótipar o site; onde usei o FIGMA.</br>
+ - Desenvolver o código HTML5 e CSS3; aqui temos alguns detalhes. Não consegui avançar no Scss, pois não conhecia a tecnológia, e estou então aprendendo.</br>
+ - Crair um banco de dados para envio do formúlario através do PHP. Aprendi quando a oportunidade surgiu, e acabei aprendendo ferramentas novas que vou usar em outros projetos.</br>
 
-## Sobre o teste
+## Como acessar o site:
 
-Este é um teste prático que desenvolvemos para a avaliação dos candidatos participantes de nosso processo seletivo para vagas de Frontend ou Full-Stack.
+- Através do link: https://cafecompany.000webhostapp.com/
 
-## Tecnologias para o desafio
+## Como executar o banco de dados:
 
-Você deve utilizar as seguintes tecnologias para o desenvolvimento do teste:
+- Você pode baixar o arquivo cliente.sql e executar o teste localmente através de um servidor apache.</br>
+- Ou pode acessar https://databases-auth.000webhost.com/</br>
+ E fazer login com o seguintes </br>usuario: id20498484_cafecompany</br>
+                                senha: Cany<cafe1234
 
-- HTML5
-- CSS
-- JavaScript ou jQuery
-- PHP (Para Full-Stack)
-- MySQL (Para Full-Stack)
+## Design
 
-## O que nos impressionaria no teste
+A partir do wireframe, desenvolvi a seguinte interface de usuário.</br>
 
-- Utilização de um pré-processador para o CSS (De preferência o Sass)
-- Aplicação de animações em CSS (Ex: Animações ao realizar scroll)
-- Ver o teste rodando em live (Bucket estático S3, Heroku, Firebase Hosting, etc)
-- Documentação do projeto (Com instruções para executar)
-
-## O que avaliaremos no seu teste
-
-- Criatividade
-- Organização do código
-- Performance do código
-- Boas práticas de desenvolvimento
-- Documentação do código
-- Adaptação mobile (layout responsivo)
-- Documentação do projeto (Com instruções para executar)
-
-## Etapas para realização do teste
-
-- Faça um [fork](https://github.com/Ellos-Design/teste-frontend-developer/fork) desse projeto em sua conta do GitHub
-- Realize o desafio proposto
-- Faça um push para seu repositório com o desafio implementado
-- Envie um email para (vagas@ellosdesign.com.br) com a URL do seu projeto avisando que você concluiu o teste
-
-## O desafio
-
-Você deverá desenvolver uma landing page seguindo a estrutura exibida na imagem abaixo. Você pode utilizar os textos e imagens de sua preferência para a criação da página.
-
-#### Full-Stack
-
-Deixar o formulário da landing page funcional, onde ao preencher as informações e clicar para enviar, o formulário será submetido e os dados deverão ser gravados em um banco de dados (Neste caso será necessário nos enviar o arquivo SQL para podermos implementar o banco para avaliação do teste).
-
-![Template da página a ser desenvolvida](https://github.com/Ellos-Design/teste-frontend-developer/blob/master/wireframe.png?raw=true)
+![Template da página a ser desenvolvida](https://github.com/LetoMurakai/teste-frontend-developer/blob/master/wireframe.png?raw=true)
