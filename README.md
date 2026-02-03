@@ -50,4 +50,6 @@ Você deverá desenvolver uma landing page seguindo a estrutura exibida na image
 
 Deixar o formulário da landing page funcional, onde ao preencher as informações e clicar para enviar, o formulário será submetido e os dados deverão ser gravados em um banco de dados (Neste caso será necessário nos enviar o arquivo SQL para podermos implementar o banco para avaliação do teste).
 
+[!IMPORTANT] Atenção: O mockup abaixo é apenas um esqueleto estrutural. Não queremos que você replique o design cinza e estático do modelo. Use sua criatividade para definir uma marca fictícia (ou real), escolher uma paleta de cores, tipografia e imagens que deem vida ao projeto. Sinta-se livre para adaptar o layout, desde que mantenha os elementos essenciais.
+
 ![Template da página a ser desenvolvida](https://github.com/Ellos-Design/teste-frontend-developer/blob/master/wireframe.png?raw=true)
